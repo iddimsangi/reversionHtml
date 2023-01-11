@@ -11,7 +11,9 @@ Dark green: #28b485
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  font-size: 62.5%;
+}
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -30,14 +32,65 @@ body {
     url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
-  /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  /* clip-path: polygon(50% 0, 100% 100%, 0 100%); */
 }
 .header--navs {
-  background-color: red;
-  display: none;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
 }
-.header--text {
-  background-color: blueviolet;
-  display: none;
+.logo {
+  width: 8rem;
+}
+.head-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heading{
+    text-transform: uppercase;
+    font-weight: 400;
+    color: aliceblue;
+}
+.heading--primary{
+    font-size:60px;
+    letter-spacing:40px;
+    display: block;
+    animation: moveInToRight 2s ease-out;
+}
+.heading--secondary{
+    display: block;
+    font-size:20px;
+    letter-spacing:16px;
+    font-weight: 700;
+    animation: moveInToLeft 2s ease-out;
+}
+@keyframes moveInToRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(30px);    
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+} 
+@keyframes moveInToLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
