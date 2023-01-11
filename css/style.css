@@ -49,48 +49,71 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
-.heading{
-    text-transform: uppercase;
-    font-weight: 400;
-    color: aliceblue;
+.heading {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: aliceblue;
+  margin-bottom: 2rem;
 }
-.heading--primary{
-    font-size:60px;
-    letter-spacing:40px;
-    display: block;
-    animation: moveInToRight 2s ease-out;
+.heading--primary {
+  font-size: 60px;
+  letter-spacing: 40px;
+  display: block;
+  animation: moveInToRight 2s ease-out;
 }
-.heading--secondary{
-    display: block;
-    font-size:20px;
-    letter-spacing:16px;
-    font-weight: 700;
-    animation: moveInToLeft 2s ease-out;
+.heading--secondary {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 16px;
+  font-weight: 700;
+  animation: moveInToLeft 2s ease-out;
 }
-@keyframes moveInToRight{
-    0%{
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    80%{
-        transform: translateX(30px);    
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0);
-    }
-} 
-@keyframes moveInToLeft{
-    0%{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    80%{
-        transform: translateX(-30px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
+@keyframes moveInToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: aliceblue;
+  color: #777;
+  border-radius: 200px;
+  font-weight: 700;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn:active {
+  transform: translateY(-1px);
+  transition: all 0.3s;
 }
