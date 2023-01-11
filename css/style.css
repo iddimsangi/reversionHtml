@@ -102,10 +102,29 @@ body {
   text-transform: uppercase;
   display: inline-block;
   padding: 15px 40px;
-  background-color: aliceblue;
   color: #777;
   border-radius: 200px;
   font-weight: 700;
+  position: relative;
+  animation: moveInTop 3s ease-in-out;
+  transition: all .4s;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.btn-white {
+  background-color: aliceblue;
+}
+.btn-white::after {
+  background-color: aliceblue;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -113,7 +132,22 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
+.btn:hover::after {
+  transform: scaleX(1.6) scaleY(1.8);
+  transition: all 0.4s;
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-1px);
   transition: all 0.3s;
+}
+@keyframes moveInTop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
